@@ -25,9 +25,7 @@ jobs:
           aws-region: ${{ env.REGION }}
 
       - name: Install Dependencies
-        run: |
-          node --version
-          npm ci --production
+        run: npm ci --production
 
       - name: Build Static Website
         run: npm run build
