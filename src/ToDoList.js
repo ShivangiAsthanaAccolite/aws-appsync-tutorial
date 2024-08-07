@@ -82,21 +82,11 @@ const ToDoList = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //   setTodos((prevTodos) => [...prevTodos, form]);
-        {
-            // isUpdate ?
-            //     updateTodo({
-            //         variables: {
-            //             updatetodoinput: form
-            //         }
-            //     }) :
-            createTodo({
-                variables: {
-                    createtodoinput: form
-                }
-            });
-        }
-
+        createTodo({
+            variables: {
+                createtodoinput: form
+            }
+        });
         setIsUpdate(false)
 
 
@@ -117,9 +107,6 @@ const ToDoList = () => {
 
     const updateToDo = (item) => {
 
-
-        // const { __typename, ...newObj } = item;
-        // console.log(newObj);
         if (!isUpdate) {
             setForm(item)
             setIsUpdate(true)
@@ -188,10 +175,7 @@ const ToDoList = () => {
                     onChange={handleChange}
                     required
                 />
-                {
-                    // isUpdate ? <button type="submit">Update To-Do</button> :
-                    <button type="submit">Add To-Do</button>
-                }
+                <button type="submit">Add To-Do</button>
 
             </form>
             {
