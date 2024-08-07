@@ -1,7 +1,6 @@
 import './App.css';
 
 import ToDoList from './ToDoList';
-import logo from './logo.svg';
 
 const App = () => {
   console.log("App")

@@ -153,7 +153,7 @@ const ToDoList = () => {
 
     return (
         <>
-            <h1>ToDoList</h1>
+            <h1>To Do List with AppSync</h1>
 
             <form onSubmit={handleSubmit} style={{ display: "flex", justifyContent: "space-around", margin: 40 }}>
                 <input
